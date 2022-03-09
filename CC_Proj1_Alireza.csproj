@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="MongoDB.Bson" Version="2.12.2" />
+    <PackageReference Include="MongoDB.Driver" Version="2.12.2" />
+     <PackageReference Include="IBM.Watson.LanguageTranslator.v3" Version="5.3.0" />
+    <PackageReference Include="IBM.Watson.NaturalLanguageUnderstanding.v1" Version="5.3.0" />
+    <PackageReference Include="IBM.Watson.SpeechToText.v1" Version="5.3.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.5" />
+  </ItemGroup>
+
+</Project>
