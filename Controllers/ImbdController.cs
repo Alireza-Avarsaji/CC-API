@@ -30,8 +30,8 @@ namespace CC_Proj1_Alireza.Controllers
         {
 
             _logger = logger;
-            var client = new MongoClient("mongodb://localhost:6544");
-            var database = client.GetDatabase("Alireza_cc");
+            var client = new MongoClient("mongodb://root:avkgTtbH8WtzeIOAAqtYcq3dBf6YdmXk@7e2255d7-d7a9-4c6c-a4e6-3eb428611d8a.hsvc.ir:30119/?authSource=admin");
+            var database = client.GetDatabase("imdb");
             this._comments = database.GetCollection<CommentEntity>("comment");
             this._movies = database.GetCollection<MovieEntity>("movie");
         }
