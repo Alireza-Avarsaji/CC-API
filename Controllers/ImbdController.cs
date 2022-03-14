@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
-using System.Threading.Tasks;
 using CC_Proj1_Alireza.Domains;
 using CC_Proj1_Alireza.Dtos;
 using IBM.Cloud.SDK.Core.Authentication.Iam;
@@ -11,7 +10,6 @@ using IBM.Watson.NaturalLanguageUnderstanding.v1;
 using IBM.Watson.NaturalLanguageUnderstanding.v1.Model;
 using IBM.Watson.SpeechToText.v1;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using MongoDB.Driver;
 
@@ -164,30 +162,6 @@ namespace CC_Proj1_Alireza.Controllers
 
             return movies2;
         }
-
-
-        [HttpGet("test")]
-        public string Test()
-        {
-            IamAuthenticator authenticator = new IamAuthenticator(
-         apikey: "ufJA35-0DBKJ_kgEFqTbeW2mybwp0KCGRm8TRBzJbpF6"
-         );
-            LanguageTranslatorService languageTranslator = new LanguageTranslatorService("2021-09-22", authenticator);
-            languageTranslator.SetServiceUrl("https://api.us-south.language-translator.watson.cloud.ibm.com/instances/2a48d1a5-ce8c-4b05-8df8-878d72aedc2f");
-
-            var result = languageTranslator.ListLanguages();
-
-            Console.WriteLine(result.Response);
-            var m = new MovieEntity
-            {
-                Id = "a",
-                Name = "salam"
-            };
-            _movies.InsertOne(m);
-
-            return "done";
-        }
-
 
     }
 }
